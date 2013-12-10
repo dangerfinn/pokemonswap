@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+  <link rel="stylesheet" href="css/idangerous.swiper.css">
+  <style>
+/* Demo Styles */
+html, body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  position: relative;
+  height: 100%;
+}
+.container, .swiper-wrapper { 
+    height: 100%; 
+    overflow: hidden;    
+}
+.swiper-container, .swiper-container2, .swiper-container3 {
+  width: 100%;
+  height: 50%;
+  color: #fff;
+  text-align: center;
+  display: block;
+}
+.red-slide {
+    height: 100%; 
+  background: #ca4040;
+}
+.blue-slide {
+    height: 100%; 
+  background: #4390ee;
+}
+.orange-slide {
+    height: 100%; 
+  background: #ff8604;
+}
+.green-slide {
+    height: 100%; 
+  background: #49a430;
+}
+.pink-slide {
+    height: 100%; 
+  background: #973e76;
+}
+.swiper-slide .title {
+  font-style: italic;
+  font-size: 42px;
+  margin-top: 20%;
+  margin-bottom: 0;
+  line-height: 45px;
+  vertical-align: central;
+}
+/*
+.slide-middle img {
+    width: 100%;
+}
+
+.slide-bottom img {
+    width: 100%
+}
+*/
+  </style>
+</head>
+<body>
+    <div class="container">
+  <div class="swiper-container section">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide red-slide">
+        <div class="title">Pokemon Gang</div>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-container2 section">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide green-slide">
+        <div class="title">Swipe me!</div>
+      </div>
+    </div>
+  </div>
+        </div>
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script src="js/idangerous.swiper-2.1.min.js"></script>
+  <script>
+      var swipers = [null, null];
+      var images = [ 'charmander', 'squirtle', 'bulbasaur'];
+      var swipersCreated = false;
+      function createSwipers() {
+          swipers[0] = new Swiper('.swiper-container', {
+              loop: true,
+              grabCursor: true
+          })
+          swipers[1] = new Swiper('.swiper-container2', {
+              loop: true,
+              grabCursor: true
+          })
+          for (var x = 0; x < images.length; x++) {
+              addImage(images[x]);
+          }
+          //add in images
+          swipersCreated = true;
+      }
+
+      function addImage(img) {
+          swipers[0].createSlide('<img src="images/' + img + '-head.jpg" height="100%">', 'swiper-slide slide-top', 'span').append();
+          swipers[1].createSlide('<img src="images/' + img + '-body.jpg" height="100%">', 'swiper-slide slide-middle', 'span').append();
+      }
+      createSwipers();
+  </script>
+</body>
+</html>

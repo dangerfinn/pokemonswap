@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "dangerfinn.pokemonswap"
+        versionCode="10"
+        version   = "0.0.1">
+
+    <!-- versionCode is optional and Android only -->
+    <preference name="phonegap-version" value="2.9.0" />
+    <gap:splash src="splash.png" />
+    <preference name="splash-screen-duration" value="5000" />
+    <icon src="icon.png" />
+    <name>Pokemon Swap</name>
+
+    <description>
+      Pokemon Swap
+    </description>
+
+    <author href="https://github.com/dangerfinn" email="finncleary@yahoo.co.uk">
+        Finnbar Cleary
+    </author>
+
+</widget>
